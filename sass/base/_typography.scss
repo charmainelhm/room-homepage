@@ -1,0 +1,38 @@
+@use "../abstracts/fonts" as *;
+@use "../abstracts/colors" as *;
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap");
+
+body {
+  font-family: "League Spartan", sans-serif;
+  font-size: $fs-400;
+  color: $clr-light-grey;
+}
+
+h1,
+h2 {
+  color: $clr-black;
+}
+
+h1 {
+  font-size: $fs-700;
+}
+
+h2 {
+  font-size: $fs-500;
+  font-weight: $fw-semi-bold;
+  letter-spacing: 0.2em;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+
+  a {
+    color: $clr-dark-grey;
+    transition: color 0.2s ease-in;
+
+    &:hover {
+      color: $clr-black;
+    }
+  }
+}

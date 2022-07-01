@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap");
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "League Spartan", sans-serif;
+  font-size: 1.7rem;
+  color: hsl(0deg, 0%, 63%);
+}
+
+h1,
+h2 {
+  color: hsl(0deg, 0%, 0%);
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(0deg, 0%, 27%);
+  transition: color 0.2s ease-in;
+}
+.attribution a:hover {
+  color: hsl(0deg, 0%, 0%);
+}
+
+/*# sourceMappingURL=style.css.map */
