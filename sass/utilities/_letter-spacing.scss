@@ -1,0 +1,9 @@
+@use "../abstracts/spacing" as *;
+
+.letter-spacing-400 {
+  letter-spacing: $size-8;
+}
+
+.letter-spacing-500 {
+  letter-spacing: $size-12;
+}

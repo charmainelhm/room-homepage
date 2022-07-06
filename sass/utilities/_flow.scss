@@ -1,0 +1,5 @@
+@use "../abstracts/spacing" as *;
+
+.flow > * + * {
+  margin-top: $size-32;
+}
