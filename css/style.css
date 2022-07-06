@@ -26,6 +26,15 @@ a {
   color: inherit;
 }
 
+button {
+  border: none;
+  background: none;
+}
+
+img {
+  width: 100%;
+}
+
 body {
   font-family: "League Spartan", sans-serif;
   font-size: 1.7rem;
