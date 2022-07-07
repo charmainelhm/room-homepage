@@ -1,0 +1,23 @@
+@use "../abstracts/colors" as *;
+@use "../abstracts/spacing" as *;
+
+.feature {
+  &__gallery {
+    position: relative;
+    img {
+      display: block;
+    }
+  }
+  &__controller {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    button {
+      background-color: $clr-black;
+      width: 56px;
+      height: 56px;
+      display: inline-grid;
+      place-content: center;
+    }
+  }
+}

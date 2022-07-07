@@ -34,6 +34,7 @@ a {
 button {
   border: none;
   background: none;
+  cursor: pointer;
 }
 
 img {
@@ -79,6 +80,10 @@ p {
   color: hsl(0deg, 0%, 100%);
 }
 
+.black-text {
+  color: hsl(0deg, 0%, 0%);
+}
+
 .uppercase {
   text-transform: uppercase;
 }
@@ -99,6 +104,25 @@ p {
 
 .flow > * + * {
   margin-top: 2rem;
+}
+
+.feature__gallery {
+  position: relative;
+}
+.feature__gallery img {
+  display: block;
+}
+.feature__controller {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.feature__controller button {
+  background-color: hsl(0deg, 0%, 0%);
+  width: 56px;
+  height: 56px;
+  display: inline-grid;
+  place-content: center;
 }
 
 /*# sourceMappingURL=style.css.map */
