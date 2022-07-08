@@ -3,3 +3,7 @@
 .content-wrapper {
   @include content-wrapper(80%, 5.5rem);
 }
+
+.content-wrapper[data-wrapper="narrow"] {
+  @include content-wrapper(75%, 5.5rem);
+}

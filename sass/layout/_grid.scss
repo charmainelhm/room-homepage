@@ -1,0 +1,13 @@
+@media screen and (min-width: 900px) {
+  .desktop-grid {
+    display: grid;
+    grid-auto-flow: column;
+    &.feature {
+      grid-auto-columns: auto 40%;
+    }
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

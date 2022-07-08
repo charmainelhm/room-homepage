@@ -102,6 +102,12 @@ p {
   margin-inline: auto;
 }
 
+.content-wrapper[data-wrapper=narrow] {
+  width: 75%;
+  padding-block: 5.5rem;
+  margin-inline: auto;
+}
+
 .flow > * + * {
   margin-top: 2rem;
 }
@@ -133,6 +139,21 @@ p {
   height: 56px;
   display: inline-grid;
   place-content: center;
+}
+@media screen and (min-width: 1200px) {
+  .feature__controller {
+    transform: translateX(100%);
+  }
+  .feature__controller button {
+    width: 72px;
+    height: 72px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .feature__content {
+    display: grid;
+    place-content: center;
+  }
 }
 
 .nav {
@@ -183,6 +204,20 @@ p {
   height: 100vh;
   background: black;
   opacity: 0.5;
+}
+
+@media screen and (min-width: 900px) {
+  .desktop-grid {
+    display: grid;
+    grid-auto-flow: column;
+  }
+  .desktop-grid.feature {
+    grid-auto-columns: auto 40%;
+  }
+  .desktop-grid img {
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
