@@ -1,5 +1,5 @@
+@use "../abstracts/mixins" as *;
+
 .content-wrapper {
-  width: 80%;
-  padding-block: 5.5rem;
-  margin-inline: auto;
+  @include content-wrapper(80%, 5.5rem);
 }

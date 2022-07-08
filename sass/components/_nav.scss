@@ -1,0 +1,54 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/spacing" as *;
+
+$pd-block: 5rem;
+$pd-inline: 2rem;
+
+.nav {
+  position: absolute;
+  width: 100%;
+  padding: $pd-block $pd-inline;
+  z-index: 10;
+
+  #button-expand {
+    position: absolute;
+  }
+
+  .logo {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__content {
+    position: absolute;
+    z-index: 12;
+    inset: 0;
+    background-color: white;
+    padding-inline: $pd-inline;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__items > * {
+    display: inline;
+
+    &:not(:last-child) {
+      margin-right: $size-32;
+    }
+  }
+}
+
+[data-state="collapsed"] {
+  .nav__content,
+  .overlay {
+    transform: translateX(-100%);
+  }
+}
+
+[data-state="expanded"] {
+  .nav__content,
+  .overlay {
+    transform: translateX(0);
+  }
+}

@@ -1,0 +1,5 @@
+@mixin content-wrapper($width, $pd-block) {
+  width: $width;
+  padding-block: $pd-block;
+  margin-inline: auto;
+}
