@@ -1,34 +1,16 @@
 @use "../abstracts/mixins" as *;
 @use "../abstracts/spacing" as *;
 
-$pd-block: 5rem;
-$pd-inline: 2rem;
+:root {
+  --pd-block: 5rem;
+  --pd-inline: 2rem;
+}
 
 .nav {
   position: absolute;
   width: 100%;
-  padding: $pd-block $pd-inline;
+  padding: var(--pd-block) var(--pd-inline);
   z-index: 10;
-
-  #button-expand {
-    position: absolute;
-  }
-
-  .logo {
-    display: flex;
-    justify-content: center;
-  }
-
-  &__content {
-    position: absolute;
-    z-index: 12;
-    inset: 0;
-    background-color: white;
-    padding-inline: $pd-inline;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
 
   &__items > * {
     display: inline;
@@ -36,6 +18,56 @@ $pd-inline: 2rem;
     &:not(:last-child) {
       margin-right: $size-32;
     }
+  }
+
+  @media screen and (max-width: 600px) {
+    #button-expand {
+      position: absolute;
+    }
+
+    .logo {
+      display: flex;
+      justify-content: center;
+    }
+
+    &__content {
+      position: absolute;
+      z-index: 12;
+      inset: 0;
+      background-color: white;
+      padding-inline: var(--pd-inline);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}
+
+[data-state="desktop"] {
+  --pd-inline: 5rem;
+  display: flex;
+  column-gap: $size-96;
+
+  .overlay {
+    transform: translateX(-100%);
+  }
+
+  button {
+    display: none;
+  }
+
+  .nav__items a {
+    position: relative;
+  }
+
+  .nav__items a:hover::after {
+    content: "";
+    position: absolute;
+    bottom: $size-16 * -1;
+    left: 20%;
+    right: 20%;
+    height: 2.5px;
+    background-color: white;
   }
 }
 

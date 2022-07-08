@@ -156,34 +156,65 @@ p {
   }
 }
 
+:root {
+  --pd-block: 5rem;
+  --pd-inline: 2rem;
+}
+
 .nav {
   position: absolute;
   width: 100%;
-  padding: 5rem 2rem;
+  padding: var(--pd-block) var(--pd-inline);
   z-index: 10;
-}
-.nav #button-expand {
-  position: absolute;
-}
-.nav .logo {
-  display: flex;
-  justify-content: center;
-}
-.nav__content {
-  position: absolute;
-  z-index: 12;
-  inset: 0;
-  background-color: white;
-  padding-inline: 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 .nav__items > * {
   display: inline;
 }
 .nav__items > *:not(:last-child) {
   margin-right: 2rem;
+}
+@media screen and (max-width: 600px) {
+  .nav #button-expand {
+    position: absolute;
+  }
+  .nav .logo {
+    display: flex;
+    justify-content: center;
+  }
+  .nav__content {
+    position: absolute;
+    z-index: 12;
+    inset: 0;
+    background-color: white;
+    padding-inline: var(--pd-inline);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+[data-state=desktop] {
+  --pd-inline: 5rem;
+  display: flex;
+  column-gap: 6rem;
+}
+[data-state=desktop] .overlay {
+  transform: translateX(-100%);
+}
+[data-state=desktop] button {
+  display: none;
+}
+[data-state=desktop] .nav__items a {
+  position: relative;
+}
+[data-state=desktop] .nav__items a:hover::after {
+  content: "";
+  position: absolute;
+  bottom: -1rem;
+  left: 20%;
+  right: 20%;
+  height: 2.5px;
+  background-color: white;
 }
 
 [data-state=collapsed] .nav__content,
