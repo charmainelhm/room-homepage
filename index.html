@@ -60,10 +60,20 @@
     <main>
       <section class="feature">
         <div class="feature__gallery">
-          <img
-            src="images/mobile-image-hero-1.jpg"
-            alt="Room with dining furniture"
-          />
+          <picture>
+            <source
+              srcset="images/desktop-image-hero-1.jpg"
+              media=" (min-width: 600px)"
+            />
+            <img
+              src="images/mobile-image-hero-1.jpg"
+              srcset="
+                images/mobile-image-hero-1.jpg,
+                images/desktop-image-hero-1.jpg
+              "
+              alt="Room with dining furniture"
+            />
+          </picture>
           <div class="feature__controller">
             <button>
               <svg width="14" height="24" xmlns="http://www.w3.org/2000/svg">
