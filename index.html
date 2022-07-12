@@ -12,6 +12,7 @@
     />
 
     <link rel="stylesheet" href="css/style.css" />
+    <script defer src="js/script.js"></script>
 
     <title>Frontend Mentor | Room homepage</title>
   </head>
@@ -58,7 +59,7 @@
       <div class="overlay"></div>
     </header>
     <main>
-      <section class="feature | desktop-grid">
+      <section class="feature | desktop-grid" data-slide="1">
         <div class="feature__gallery">
           <picture>
             <source
@@ -75,7 +76,7 @@
             />
           </picture>
           <div class="feature__controller">
-            <button>
+            <button id="prev-slide">
               <svg width="14" height="24" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M13 0L1 12l12 12"
@@ -84,7 +85,7 @@
                   fill-rule="evenodd"
                 />
               </svg></button
-            ><button>
+            ><button id="next-slide">
               <svg width="14" height="24" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M1 0l12 12L1 24"
