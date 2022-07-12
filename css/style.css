@@ -173,7 +173,7 @@ p {
 .nav__items > *:not(:last-child) {
   margin-right: 2rem;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 599px) {
   .nav #button-expand {
     position: absolute;
   }

@@ -21,6 +21,11 @@ const slidePhoto = document.querySelector(".feature__gallery > picture");
 const slideButtons = document.querySelectorAll(".feature__controller > button");
 const slideTitle = document.querySelector(".feature__content > h1");
 const slideInfo = document.querySelector(".feature__content > p");
+const navBar = document.querySelector(".nav");
+const navLinks = document.querySelectorAll(".nav__item > a");
+const expandNav = document.querySelector("#button-expand");
+const collapseNav = document.querySelector("#button-collapse");
+const mobileView = window.matchMedia("(max-width: 599px)");
 
 const updateSlideContent = function () {
   let currentSlide = featureDiv.dataset.slide;
@@ -55,8 +60,34 @@ const updateSlideNum = function (btnClicked) {
   updateSlideContent();
 };
 
+const checkViewportState = function (e) {
+  if (e.matches) {
+    navBar.dataset.state = "collapsed";
+    navLinks.forEach((link) =>
+      link.classList.replace("white-text", "black-text")
+    );
+  } else {
+    navBar.dataset.state = "desktop";
+    navLinks.forEach((link) =>
+      link.classList.replace("black-text", "white-text")
+    );
+  }
+};
+
 slideButtons.forEach((button) => {
   button.addEventListener("click", function () {
     updateSlideNum(button.id);
   });
+});
+
+mobileView.addEventListener("change", checkViewportState);
+
+checkViewportState(mobileView);
+
+expandNav.addEventListener("click", function () {
+  navBar.dataset.state = "expanded";
+});
+
+collapseNav.addEventListener("click", function () {
+  navBar.dataset.state = "collapsed";
 });
